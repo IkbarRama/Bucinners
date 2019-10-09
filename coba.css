@@ -1,0 +1,102 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	box-sizing: border-box;
+	font-family: roboto;
+}
+header{
+	height: 15vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-area: "header";
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding-right: 5vw;
+}
+main{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 1fr;
+	grid-area: 
+	"boxup1 boxup2"
+	"box1 box2"
+	"box3 box4"
+	"box1 box2"
+}
+footer{
+	display: grid;
+	height: 40vh;
+	grid-template-columns: 2fr 1fr 3fr;
+	grid-template-rows: 1fr;
+	grid-area: "footer1 footer2 footer3";
+}
+h1{
+	font-size: 40px;
+}
+p{
+	font-size: 15px;
+}
+nav ul{
+	display: flex;
+	list-style-type: none;
+}
+nav a{
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	padding: 10px 25px; /*padding item dengan item lainnya*/
+}
+.button{
+	background-color: #FF8923;
+	border-radius: 20px;
+}
+a:hover{
+	background-color: #D4D4D4;
+	border-radius: 20px;
+	padding: 10px 25px;
+}
+.landing{
+	background-image: url(https://1.bp.blogspot.com/-YdhgjNhbvuw/XZhvksVCvfI/AAAAAAAAE4o/JRdjIPS6aAAfqJdqnAxsz0DBjwZExrwdQCLcBGAsYHQ/s1600/Path%2B1361.png);
+	background-repeat: no-repeat;
+	background-position: top -15px right -50px;
+	background-size: 65%;
+}
+.boxup1{
+	height: 85vh;
+	padding: 200px 150px 100px 150px;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.boxup2{
+	height: 85vh;
+	padding: 300px 150px 100px;
+	display: flex;
+}
+.box1{
+	padding: 300px 50px 100px 150px;
+	background-color: #F8F8F8;
+}
+.box2{//
+	height: 70vh;
+	padding: 300px 150px 50px 150px;
+	background-color: #F8F8F8;
+}
+.box3{//
+	height: 70vh;
+	padding: 300px 150px 100px 150px;
+}
+.box4{
+	height: 70vh;
+	padding: 300px 150px 150px 150px;
+}
+button {
+	padding: 10px 40px 10px 40px;
+	margin-top: 10px;
+	border-radius: 20px;
+	color: white;
+	background-color: #3D37F1;
+}
