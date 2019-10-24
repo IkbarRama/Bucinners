@@ -1,0 +1,194 @@
+html{
+	scroll-behavior: smooth;
+}
+*{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin: 0px;
+	padding: 0px
+}
+
+header{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 1% 2%;
+}
+
+body{
+	background-image: url(https://1.bp.blogspot.com/-YdhgjNhbvuw/XZhvksVCvfI/AAAAAAAAE4o/JRdjIPS6aAAfqJdqnAxsz0DBjwZExrwdQCLcBGAsYHQ/s1600/Path%2B1361.png);
+	background-position: top -1% right -15%;
+	background-repeat: no-repeat;
+	background-size: 70%;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+}
+
+footer{
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	padding: 5%;
+	padding: 10vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.logoimg{
+	justify-content: flex-start;
+	height: 15vh;
+	padding: 10px;
+}
+
+.menu{
+	justify-content: flex-end;
+	margin-left: auto;
+	margin-right: 50px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+li{
+	display: inline-block;
+}
+
+.li{
+	color: white;
+	text-decoration: none;
+	padding: 10px 20px;
+}
+
+.li:hover, .buttonmenu:hover{
+	background-color: #D4D4D4;
+	border-radius: 25px;
+	padding: 10px 20px;
+}
+
+button{
+	padding: 10px 40px 10px 40px;
+	margin-top: 10px;
+	border-radius: 20px;
+	color: white;
+	background-color: #3D37F1;
+	border-style: none;
+	cursor: pointer;
+}
+
+.buttonmenu{
+	color: white;
+	text-decoration: none;
+	background-color: #FF8923;
+	padding: 10px 20px;
+	border-radius: 25px;
+}
+
+.boxup1{
+	display: flex;
+	flex-direction: row;
+}
+
+.box1{
+	display: flex;
+	flex-direction: row;
+	background-color: #F8F8F8;
+}
+
+.box2{
+	display: flex;
+	flex-direction: row;
+}
+
+.box3{
+	display: flex;
+	flex-direction: row;
+	background-color: #F8F8F8;
+}
+
+.lefttext{
+	padding: 10vw;
+}
+
+.righttext{
+	padding: 10vw;
+}
+
+.rightimg{
+	padding: 10vw;
+}
+
+.leftimg{
+	padding: 10vw;
+}
+
+.leftfooter{
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
+	align-items: center;
+	margin-left: auto;
+}
+
+.bottomleftfooter{
+	margin: auto;
+}
+
+.middlefooter{
+	margin: 0px auto;
+}
+
+.rightfooter{
+	margin: auto 0px 0px auto;
+}
+
+.imgsocial{
+	margin: .3vw;
+}
+
+a{
+	font-size: 2.5vh;
+	font-weight: 500;
+}
+
+h1{
+	font-size: 5vh;
+}
+
+.tombol{
+	font-size: 2.5vh;
+	margin: 20px 0px;
+	font-weight: 500;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	margin: auto;
+	width: 50%;
+}
+
+.middle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+	margin: auto;
+	width: 50%;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+	margin: auto 0 0 auto;
+	width: 50%;
+}
+
+.description{
+	width: 25vw;
+	text-align: justify;
+}

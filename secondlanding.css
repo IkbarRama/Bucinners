@@ -1,0 +1,129 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: 
+    url("https://1.bp.blogspot.com/-cpFPx28TB1Y/XaMBsHgGw4I/AAAAAAAAE60/_nLJB_onAsclVYmoUDkKNlTPG03Nqjm0QCLcBGAsYHQ/s1600/Path%2B1659.png"),
+    url("https://1.bp.blogspot.com/-OBq0YdUn8Jg/XaMBsVIXEdI/AAAAAAAAE64/BLuhopc82us-CgSakCHCXuG8mRrjWndxQCLcBGAsYHQ/s1600/Path%2B1361.png");
+    background-position: top -2vh left -7vw;
+    background-repeat: no-repeat;
+    background-size: 110vh, 115vh;
+    background-color: #A6A1F5;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    flex-direction: row;
+}
+
+ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none; 
+}
+
+.visit{
+    display: inline-block;
+    background-color: #c5c2f9;
+    color: white;
+    border-radius: 25px;
+    text-align: center;
+    padding: 3% 4%;
+    margin: 1% 2%;
+    text-decoration: none;
+}
+
+.unvisit{
+    display: inline-block;
+    background-color: #f5f5fe;
+    color: #AFA8DC;
+    border-radius: 25px;
+    text-align: center;
+    padding: 3% 4%;
+    margin: 1% 2%;
+    text-decoration: none;
+}
+
+p{
+    font-size: 2.5vh;
+}
+
+.bigfont{
+    font-size: 7vh;
+    font-weight: 500;
+}
+
+.top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    padding: 50px 100px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 5%;
+    margin-top: 10%;
+}
+
+.left, .middle{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.middle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: auto 0 0 auto;
+}
+
+button{
+    width: 10vw;
+    border: none;
+    margin: auto;
+    margin-top: 30%;
+    margin-bottom: 5%;
+    padding: 1.7vh;
+    font-size: 2vh;
+    font-weight: 700;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #AFA8DC;
+    color:#AFA8DC;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none   ;
+}
