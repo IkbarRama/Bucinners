@@ -1,0 +1,335 @@
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+#restart {
+    margin: 0.2em;
+    line-height: 2.2em;
+    height: 2.8em; 
+    background-color: #FFFFFF;
+}
+
+#logoRestart{
+    height: 1.5em;
+    padding-top: 0.1em;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    padding: 20px 30px;
+    height: auto;
+    border-bottom: 3px solid #e5e5e5;
+}
+
+.headerleft{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: auto;
+    font-size: 6vh;
+    font-weight: 350;
+}
+
+.headerright{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    font-size: 4vh;
+    font-weight: 350;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+#word-section {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    height: 4.2em;
+    line-height: 2em;
+    margin: 5vh 17vw;
+    background-color: #f8f8fe;
+    /* hide 3rd line of text */
+    border-radius: 0.25em;
+    position: relative;
+    overflow: hidden; }
+    #word-section > span {
+      display: inline-block;
+      margin-left: 0.2em;
+      /* emulate spaces between words */ }
+
+
+      /* .kata{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5vh;
+    background-color: #f8f8fe;
+    margin: 5vh 17vw;
+    border-radius: 20px;
+    justify-content: space-around;
+}
+
+.green{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    margin: 5px 10px;
+    color:#b3e380;
+    padding: 5px 10px;
+}
+.red{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    margin: 5px 10px;
+    color: red;
+    padding: 5px 10px;
+}
+.white{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #d8d8d8;
+    background-color: white;
+}
+.black{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vh;
+    margin: 5px 10px;
+    padding: 5px 10px;
+} */
+
+.katainput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    padding: 1vh;
+    border: none;
+    border-bottom: 3px solid #969ca2;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 4vh;
+}
+
+.tombol{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.type-btn{
+    margin: 10px;
+    padding: 5px 15px;
+    border: 3px solid #969ca2;
+    border-radius: 10px;
+}
+
+.kecepatan{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh;
+}
+
+.bigfont{
+    text-align: center;
+    font-size: 6vh;
+    font-weight: 700;
+    margin: 20px 5vh;
+}
+.akurasi{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 20px 5vh;
+}
+.katabenar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 20px 5vh;
+}
+.katasalah{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 20px 5vh;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    padding: 5%;
+}
+
+.left, .middle{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.middle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+}
+
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin: auto 0 0 auto;
+}
+
+table,th,td{
+    border: 1px solid #747474;
+    border-collapse: collapse;
+    padding: 1vh 2vw;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.peringkat{
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+}
+
+.nilai{
+    width: 52vw;
+    height: 7vh;
+    border: none;
+    margin: auto;
+    color: white;
+    font-size: 3vh;
+    border-radius: 10px;
+    background-color: #6666ff;
+    margin-top: 5vh; 
+}
+.kecepatan{
+    background-color: #e6edfd;
+    width: 48vw;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.footerabu{
+    margin-top: 10vh;
+    background-color: #f8f8fe;
+}
+
+.modal{
+    position:fixed;
+    padding-top: 20vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  background-image: linear-gradient(rgb(233, 232, 253), #FFFFFF);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.isimodal{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.maker{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.instagramlogo{
+    height: 20px;
+    padding: 0 5px;
+}
+.description{
+    width: 20vw;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+.logoimg{
+    height: 70px;
+}
+
+.waiting {
+    text-align: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1em; }
+  
+  .current-word {
+    background-color: #dddddd; }
+  
+  .correct-word-c {
+    color: #93C572; }
+  
+  .incorrect-word-c {
+    color: #e50000; }
+  
+  .incorrect-word-bg {
+    background-color: #e50000; }
