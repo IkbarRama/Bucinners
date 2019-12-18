@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Berlatih</title>
     <link rel="Stylesheet" type="text/css" href="ketik.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> <!--baru ditambah-->
+    <script src="nilai.js"></script>
 </head>
-<body>
+<body onload="addWords()">
     <header>
         <div class="headerleft">
             <a class="headerleft" href="index.html"><img src="https://1.bp.blogspot.com/-R0MBZWUA-Nk/XaPyFSy8hcI/AAAAAAAAE8s/eGiA9D_0KAwQ821kZh6G-yO7WcPNT51KgCLcBGAsYHQ/s1600/Back-Arrow-Icon-PNG-715x715.png" style="height: 40px; padding-right: 30px;"></a>
@@ -19,78 +21,48 @@
         </div>
     </header>
     <main>
-        <section class="kata">
-            <p class="green">menyedihkan</p>
-            <p class="green">makan</p>
-            <p class="green">dengan</p>
-            <p class="green">saya</p>
-            <p class="red">bersama</p>
-            <p class="red">tau</p>
-            <p class="green">uang</p>
-            <p class="green">minum</p>
-            <p class="red">bersama</p>
-            <p class="red">sejak</p>
-            <p class="white">masalah</p>
-            <p class="black">di</p>
-            <p class="black">segera</p>
-            <p class="black">ini</p>
-            <p class="black">mulai</p>
-            <p class="black">mengapa</p>
-            <p class="black">jelas</p>
-            <p class="black">gelas</p>
+        <section id="word-section">
+            <div class="waiting"">⌛</div>
         </section>
 
-        <section class="katainput">
-            <input type="text" id="space" onkeyup="spasi()" name="katainput">
+        <section class="katainput" id="type-section">
+            <input id="typebox" name="typebox" type="text" tabindex="1" autofocus onkeyup="typingTest(event)"/>
         </section>
 
         <section class="tombol">
-            <p class="waktu">0:43</p>
-            <img src="https://1.bp.blogspot.com/-tlfvYPKaPCk/XaPOlWTpv4I/AAAAAAAAE8Q/ioeUvvrC16QUSV8ERA2W0RTNVsgzFNumwCLcBGAsYHQ/s1600/ic_refresh_24px.png" style="height: 25px; margin: 20px;">
+            <div id="timer" class="type-btn"><span style="font-weight: bolder; color: #969ca2;">1:00</span></div>
+            <button id="restart" class="type-btn" tabindex="2" onclick="restartTest()">
+                <img id="logoRestart" src="https://1.bp.blogspot.com/-tlfvYPKaPCk/XaPOlWTpv4I/AAAAAAAAE8Q/ioeUvvrC16QUSV8ERA2W0RTNVsgzFNumwCLcBGAsYHQ/s1600/ic_refresh_24px.png">
+            </button>
         </section>
 
+        <button class="nilai" id="nilai">Tampilkan Hasil</button>
         <section class="kecepatan">
             <div class="bigfont">
-                <p>76</p>
+                <p id="kecepatan">0</p>
                 <p>WPM</p>
             </div>
             <div class="akurasi">
                 <p>Akurasi</p>
-                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px;">
-                <p>69%</p>
+                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px; height: 0.5vh;">
+                <p id="akurasi">
+                    0
+                </p>
             </div>
             <div class="katabenar">
                 <p>Kata Benar</p>
-                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px;">
-                <p style="color: #b3e380;">45</p>
+                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px;height: 0.5vh;">
+                <p id="kataBenar" style="color: #72c518;font-weight: bolder;">0</p>
             </div>
             <div class="katasalah">
                 <p>Kata Salah</p>
-                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px;">
-                <p style="color: red;">10</p>
+                <img src="https://1.bp.blogspot.com/-x_7Ur3MlZlc/XZ2LSbIBJ3I/AAAAAAAAE6E/SqPRfLVA1V8wXH9laylJj6hCVnVsWCUDgCLcBGAsYHQ/s1600/Line%2B39.png" style="width: 40px; padding: 10px; height: 0.5vh;">
+                <p id="kataSalah" style="color: red; font-weight: bolder;">0</p>
             </div>
-        </section>
-
-        <section class="ratarata">
-            <p class="bigfont">Rata - Rata</p>
-            <table>
-                <tr>
-                    <th>Kecepatan</th>
-                    <th>Akurasi</th>
-                    <th>Kata Benar</th>
-                    <th>Kata Salah</th>
-                </tr>
-                <tr>
-                    <td style="font-weight: bolder;">70 WPM</td>
-                    <td>69%</td>
-                    <td style="color: green;">45</td>
-                    <td style="color: red;">10</td>
-                </tr>
-            </table>
         </section>
     </main>
 
-    <footer>
+    <footer class="footerabu">
 		<div class="left">
 			<div>
 				<a href="index.html"><img class="logofooter" src="https://1.bp.blogspot.com/-tDhXsKYljvM/XZhvkZISB-I/AAAAAAAAE4k/IHMS94Cu1EsAu8W_Dd8ca1ilvnniYs8WQCLcBGAsYHQ/s1600/Logo%2B%25281%2529.png" style="width: 20vh"></a>
@@ -111,20 +83,42 @@
 			<p style="font-size: 12px; color: #969CA2;">© 2019 all rights reserved</p>
 			</div>
 		</div>
-		<div class="middle">
-			<p style="font-size: 15px; color: #747474;">
-				<br>
-				<a href="tentangkita.html" style="text-decoration: none; color: #747474; font-weight: normal; font-size: 15px;">Tentang Kita</a><br><br>
-				Komunitas<br><br>
-				Kontak Kami<br><br>
-				+123 456 789<br><br>
-				Universitas jember
-			</p> 
+        <div class="middle">
+            <div style="font-size: 15px; color: #747474;">
+                <p onclick="loadDoc()" id="myBtn" style="cursor: pointer; margin-top: 10px;">Tentang Kita</p>
+                <div id="demo"></div>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <div class="isimodal">
+                            <a href="index.html"><img src="https://1.bp.blogspot.com/-tDhXsKYljvM/XZhvkZISB-I/AAAAAAAAE4k/IHMS94Cu1EsAu8W_Dd8ca1ilvnniYs8WQCLcBGAsYHQ/s1600/Logo%2B%25281%2529.png" class="logoimg"></a>
+                            <h1>Tentang Kita</h1>
+                            <p>Website ini dibuat oleh:</p>
+                            <div class="maker">
+                                <img src="https://www.freepnglogos.com/uploads/instagram-logo-png-hd-31.png" class="instagramlogo">
+                                <a href="https://www.instagram.com/sucidm12" style="text-decoration: none;"><p>@sucidm12</p></a>
+                                <img src="https://www.freepnglogos.com/uploads/instagram-logo-png-hd-31.png" class="instagramlogo">
+                                <a href="https://www.instagram.com/slinglong_" style="text-decoration: none;"><p>@slinglong_</p></a>
+                            </div>
+                            <p class="description">
+                                Pembuatan Website ini bertujuan untuk memenuhi tugas akhir mata kuliah 
+                                Perancangan Website yang diampu oleh Bapak Yudha dan Bapak Zarkasih 
+                                serta dibantu oleh segenap Asisten Dosen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <p style="margin-top: 10px;">Komunitas</p>
+                <p style="margin-top: 10px;">Kontak Kami</p>
+                <p style="margin-top: 10px;">+124 456 789</pstyle="margin-top: 10px;">
+                <p style="margin-top: 10px;">Universitas Jember</p>
+            </div>
 		</div>
 		<div class="right">
 			<img src="https://1.bp.blogspot.com/-zSgnKlYgums/XZhvjzpth-I/AAAAAAAAE4c/zL5i74FVS-YkSBU6sXxc5IKVDpdpgGVwQCLcBGAsYHQ/s1600/Group%2B72.png" style="height: 15vh;">
 		</div>
     </footer>
     <script src="ketik.js"></script>
+    <script src="tentangkita.js"></script>
 </body>
 </html>
