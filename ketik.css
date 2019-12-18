@@ -4,6 +4,18 @@
     padding: 0px;
 }
 
+#restart {
+    margin: 0.2em;
+    line-height: 2.2em;
+    height: 2.8em; 
+    background-color: #FFFFFF;
+}
+
+#logoRestart{
+    height: 1.5em;
+    padding-top: 0.1em;
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -37,7 +49,24 @@ main{
     flex-direction: column;
 }
 
-.kata{
+#word-section {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    height: 4.2em;
+    line-height: 2em;
+    margin: 5vh 17vw;
+    background-color: #f8f8fe;
+    /* hide 3rd line of text */
+    border-radius: 0.25em;
+    position: relative;
+    overflow: hidden; }
+    #word-section > span {
+      display: inline-block;
+      margin-left: 0.2em;
+      /* emulate spaces between words */ }
+
+
+      /* .kata{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -76,7 +105,7 @@ main{
     font-size: 4vh;
     margin: 5px 10px;
     padding: 5px 10px;
-}
+} */
 
 .katainput{
     display: flex;
@@ -88,7 +117,7 @@ input{
     padding: 1vh;
     border: none;
     border-bottom: 3px solid #969ca2;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: sans-serif;
     text-align: center;
     font-size: 4vh;
 }
@@ -100,7 +129,7 @@ input{
     align-items: center;
 }
 
-.waktu{
+.type-btn{
     margin: 10px;
     padding: 5px 15px;
     border: 3px solid #969ca2;
@@ -127,6 +156,7 @@ input{
     justify-content: center;
     align-items: center;
     font-size: 3vh;
+    font-weight: 500;
     margin: 20px 5vh;
 }
 .katabenar{
@@ -135,6 +165,7 @@ input{
     justify-content: center;
     align-items: center;
     font-size: 3vh;
+    font-weight: 500;
     margin: 20px 5vh;
 }
 .katasalah{
@@ -143,6 +174,7 @@ input{
     justify-content: center;
     align-items: center;
     font-size: 3vh;
+    font-weight: 500;
     margin: 20px 5vh;
 }
 
@@ -191,21 +223,113 @@ table,th,td{
     font-size: 3vh;
 }
 
-.ratarata{
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #f8f8fe;
-    padding-bottom: 5vh;
-    margin-top: 2vh;
-}
 .peringkat{
     padding: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: fit-content;
+}
+
+.nilai{
+    width: 52vw;
+    height: 7vh;
+    border: none;
+    margin: auto;
+    color: white;
+    font-size: 3vh;
+    border-radius: 10px;
+    background-color: #6666ff;
+    margin-top: 5vh; 
+}
+.kecepatan{
+    background-color: #e6edfd;
+    width: 48vw;
+    margin: auto;
+    border-radius: 0 0 10px 10px;
+}
+
+.footerabu{
+    margin-top: 10vh;
     background-color: #f8f8fe;
 }
+
+.modal{
+    position:fixed;
+    padding-top: 20vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  border-radius: 5px;
+  margin: auto;
+  padding: 20px;
+  width: 50%;
+  background-image: linear-gradient(rgb(233, 232, 253), #FFFFFF);
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.isimodal{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.maker{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.instagramlogo{
+    height: 20px;
+    padding: 0 5px;
+}
+.description{
+    width: 20vw;
+    text-align: center;
+    margin-bottom: 3vh;
+}
+.logoimg{
+    height: 70px;
+}
+
+.waiting {
+    text-align: center;
+    align-items: center;
+    line-height: 1.5em;
+    font-size: 1em; }
+  
+  .current-word {
+    background-color: #dddddd; }
+  
+  .correct-word-c {
+    color: #93C572; }
+  
+  .incorrect-word-c {
+    color: #e50000; }
+  
+  .incorrect-word-bg {
+    background-color: #e50000; }
